@@ -1,0 +1,96 @@
+<%- include('./components/header'); %>
+        <!-- End Topbar -->
+        <!-- Start Breadcrumbbar -->
+        <div class="breadcrumbbar">
+          <div class="row align-items-center">
+            <div class="col-md-8 col-lg-8">
+              <div class="breadcrumb-list">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="dashboard">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Notification
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Breadcrumbbar -->
+        <!-- Start Contentbar -->
+        <div class="contentbar">
+          <!-- Start row -->
+          <div class="row">
+            <div class="card-body">
+              <div class="ecom-notification-box">
+                <ul class="list-unstyled">
+                  <li class="media">
+                    <span class="mr-3 action-icon badge badge-danger"
+                      ><i class="ri-spam-line"></i
+                    ></span>
+                    <div class="media-body">
+                      <h5 class="action-title">Alert</h5>
+                      <p class="my-3">
+                        Your Machine temperature is high please Turn off machine
+                      </p>
+                      <p>
+                        <i class="ri-check-line text-success mr-3"></i
+                        ><a href="#" class="mr-2">Report Now</a
+                        ><span class="timing">5 Jan 2019, 02:13 PM</span>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="media">
+                    <span class="mr-3 action-icon badge badge-danger"
+                      ><i class="ri-spam-line"></i
+                    ></span>
+                    <div class="media-body">
+                      <h5 class="action-title">Alert</h5>
+                      <p class="my-3">
+                        Your Machine temperature is high please Turn off machine
+                      </p>
+                      <p>
+                        <i class="ri-check-line text-success mr-3"></i
+                        ><a href="#" class="mr-2">Report Now</a
+                        ><span class="timing">5 Jan 2019, 02:13 PM</span>
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- End row -->
+        </div>
+        <!-- End Contentbar -->
+        <!-- Start Footerbar -->
+        <div class="footerbar">
+          <footer class="footer">
+            <p class="mb-0">© 2020 Login Auth System - All Rights Reserved.</p>
+          </footer>
+        </div>
+        <!-- End Footerbar -->
+      </div>
+      <!-- End Rightbar -->
+    </div>
+    <!-- End Containerbar -->
+    <!-- Start js -->      
+  <script src="/js/axios.min.js" type="module" ></script>
+  <script src="/js/userlogin.js" type="module"></script>
+  <script>
+    const userData = <%- JSON.stringify(user) %>;
+  </script>
+  <script src="/js/selectedMachines.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/detect.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/vertical-menu.js"></script>
+    <!-- Switchery js -->
+    <script src="assets/plugins/switchery/switchery.min.js"></script>
+    <!-- Core js -->
+    <script src="assets/js/core.js"></script>
+    <!-- End js -->
+  </body>
+</html>

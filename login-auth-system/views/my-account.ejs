@@ -1,0 +1,147 @@
+<%- include('./components/adminheader'); %>
+            <!-- End Topbar -->
+            <!-- Start Breadcrumbbar -->                    
+            <div class="breadcrumbbar">
+                <div class="row align-items-center">
+                    <div class="col-md-8 col-lg-8">
+                        <div class="breadcrumb-list">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">My Profile</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>          
+            </div>
+            <!-- End Breadcrumbbar -->
+            <!-- Start Contentbar -->    
+            <div class="contentbar">                
+                <!-- Start row -->
+                <div class="row">      
+                                                        <!-- My Profile Start -->
+                            <div class="tab-pane fade show active w-100" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                <div class="card m-b-30">
+                                    <div class="card-header">                                
+                                        <h5 class="card-title mb-0">My Profile</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="profilebox pt-4 text-center">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item">
+                                                    <a href="#" class="btn btn-success-rgba font-18"><i class="ri-edit-circle-line"></i></a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <img src="/assets/images/users/profile.svg" class="img-fluid" alt="profile">
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a href="#" class="btn btn-danger-rgba font-18"><i class="ri-delete-bin-3-line"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card m-b-30">
+                                    <div class="card-header">                                
+                                        <h5 class="card-title mb-0">Edit Profile Informations</h5>
+                                    </div>
+                                    <div class="card-body">
+                                       
+                                        <form 
+                                        class="form-user-data" >
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="username">Username</label>
+                                                    <input type="text" class="form-control" id="name" value="<%= user.name %>">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="useremail">Email</label>
+                                                    <input type="email" class="form-control" id="useremail" value="<%= user.email %>">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="usermobile">Mobile Number</label>
+                                                    <input type="text" class="form-control" id="usermobile" value="<%= user.phoneNumber %>">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="userbirthdate">Date of Birth</label>
+                                                    <input type="date" class="form-control" id="userbirthdate" value="<%= user.dateOfBirth %>">
+                                                </div>
+                                            </div>
+                                                                                       
+                                            <button type="submit"  class="btn userdata-form--submit btn-primary-rgba font-16"><i class="ri-save-line mr-2"></i>Update</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="card m-b-30">
+                                    <div class="card-header">                                
+                                        <h5 class="card-title mb-0">Change Password</h5>
+                                    </div>
+                                <div class="card-body">
+                                    <form class="form-user-password">
+                                        <div class="form-row">
+                                            
+                                            <div class="form-group col-md-6">
+                                                <label for="password-current">Current Password</label>
+                                                <input type="password" class="form-control" id="password-current" placeholder="********" autocomplete="password-current" name="password-current" minlength="8" required>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="password ">New Password</label>
+                                                <input type="password" class="form-control" id="password-new" placeholder="********" name="password" autocomplete="new-password" minlength="8" required>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="userconfirmedpassword">Confirmed Password</label>
+                                                <input type="password" class="form-control" id="password-confirm" placeholder="********" name="password-confirm" autocomplete="password-confirm" minlength="8" required>
+                                            </div>
+                                        </div>
+                                        
+                                        <button type="submit" class="btn userpass-form--submit btn-primary-rgba font-16"><i class="ri-save-line mr-2"></i><span class="btn--save-password">Update</span></button>
+                                    </form>
+                                </div>
+                                </div>
+                            </div>
+                            <!-- My Profile End -->                 
+                        </div>                        
+                    </div>
+                    <!-- End col -->
+                </div>
+                <!-- End row -->                  
+            </div>
+            <!-- End Contentbar -->
+            <!-- Start Footerbar -->
+            <div class="footerbar">
+                <footer class="footer">
+                    <p class="mb-0">© 2020 Login Auth System - All Rights Reserved.</p>
+                </footer>
+            </div>
+            <!-- End Footerbar -->
+        </div>
+        <!-- End Rightbar -->
+    </div>
+    <!-- End Containerbar -->
+    <!-- Start js -->        
+    <script src="/js/axios.min.js" type="module" ></script>
+    <script src="/js/userlogin.js" type="module"></script>
+    <script>
+      const userData = <%- JSON.stringify(user) %>;
+    </script>
+    <script src="/js/updateuserdata.js" type="module"></script>
+
+    <!-- <script src="/js/updateSettings.js"></script> -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/modernizr.min.js"></script>
+    <script src="/assets/js/detect.js"></script>
+    <script src="/assets/js/jquery.slimscroll.js"></script>
+    <script src="/assets/js/vertical-menu.js"></script>
+    <!-- Switchery js -->
+    <script src="/assets/plugins/switchery/switchery.min.js"></script>
+    <!-- eCommerce My Account Page js -->
+    <script src="/assets/js/custom/custom-ecommerce-myaccount.js"></script>
+    <!-- Core js -->
+    <script src="/assets/js/core.js"></script>
+    <!-- End js -->
+</body>
+
+</html>

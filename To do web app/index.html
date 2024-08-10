@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List Web App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>To-Do List Web App</h1>
+      <div class="add-task-form">
+        <input type="text" id="task-title" placeholder="Title" required />
+        <textarea id="task-desc" placeholder="Description" required></textarea>
+        <input type="datetime-local" id="task-timer" />
+        <button id="add-task-btn">Save</button>
+      </div>
+      <div class="task-list">
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Timer</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="task-table-body">
+            <!-- Tasks will be dynamically added here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

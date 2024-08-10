@@ -1,0 +1,149 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #2b2928; /* Updated background color */
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: start; /* Align items at the top */
+  min-height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  position: relative; /* Make body the reference for absolute positioning */
+}
+
+.container {
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  margin: 20px auto; /* Allow some margin for better appearance */
+  padding: 20px;
+  z-index: 2; /* Ensure content is above animations */
+}
+
+.header h1 {
+  font-size: 3em;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.header h2 {
+  font-size: 1.5em;
+  font-weight: normal;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.play-button {
+  font-size: 4em;
+  padding: 20px;
+  background-color: #474439; /* Updated button color */
+  display: inline-block;
+  border-radius: 50%;
+  margin-top: 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden; /* Clip animation to button area */
+  transition: background-color 0.3s;
+  z-index: 3; /* Ensure button is above animations */
+  width: 80px; /* Adjust width to match height for perfect circle */
+  height: 80px; /* Match width for perfect circle */
+}
+
+.circles-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+  animation: fadeOut 3s infinite;
+  z-index: 1; /* Ensure it is behind the button */
+  pointer-events: none; /* Ensure the animation doesn't block button clicks */
+}
+
+.play-button:hover {
+  background-color: #5b5a54; /* Slightly lighter hover effect */
+}
+
+.play-button span {
+  position: relative;
+  z-index: 4; /* Keep the play icon above the circles */
+}
+
+@keyframes fadeOut {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(5); /* Scale adjusted for effect */
+    opacity: 0;
+  }
+}
+
+.quote-section {
+  font-style: italic;
+  font-size: 1.5em;
+  margin: 40px 0;
+}
+
+.image-section img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.biography {
+  background-color: #474439; /* Updated biography background color */
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+.biography h3 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.achievements ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.achievements ul li {
+  background-color: #5b5a54; /* Adjusted background color for list items */
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  line-height: 1.5; /* Better spacing for list items */
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+footer p {
+  color: #b0c4de;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2.5em;
+  }
+  .header h2 {
+    font-size: 1.2em;
+  }
+  .quote-section {
+    font-size: 1.2em;
+  }
+  .image-section img {
+    width: 80%;
+  }
+  .biography h3 {
+    font-size: 1.5em;
+  }
+}
